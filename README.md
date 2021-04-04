@@ -7,7 +7,7 @@ $ chmod -R a+rwx Replace_nemo-to-nautilus_dconf_linux_OS21.04_V46.0_By_Griggorii
 
 $ ./Replace_nemo-to-nautilus_dconf_linux_OS21.04_V46.0_By_Griggorii_Wayland_adaptation.sh
 
-ignore sudo ctrl+c ctrl+c ctrl+c $ ./Replace_nemo-to-nautilus_dconf_linux_OS21.04_V46.0_By_Griggorii_Wayland_adaptation.sh
+terminal ignore sudo ctrl+c ctrl+c ctrl+c $ ./Replace_nemo-to-nautilus_dconf_linux_OS21.04_V46.0_By_Griggorii_Wayland_adaptation.sh
 
 Dconf theme icons: https://github.com/Griggorii/Setting_dconf_linux_OS20.04_V46.0_By_Griggorii_Wayland_adaptation
 
