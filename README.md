@@ -14,3 +14,7 @@ $ ./Fedora_nautilus_dconf_linux_OS34_V46.0_By_Griggorii_Wayland_adaptation.sh
 terminal ignore sudo ctrl+c ctrl+c ctrl+c $ ./Replace_nemo-to-nautilus_dconf_linux_OS21.04_V46.0_By_Griggorii_Wayland_adaptation.sh
 
 Proview theme+icons example theme: https://youtu.be/BNrL1aVWM9Y
+
+Uninstall theam icons example command terminal:
+
+$ sudo dnf remove Orchis-theme_2021-21.04.1-2.noarch oomox-griggorii-theme-icon-21.04.1-2.noarch Pop-dark-oomox-griggorii_theme_2020-21.04.1-2.noarch Tela-theme-icon-21.04.1-2.noarch
