@@ -2,6 +2,33 @@
 
 ####Griggorii@gmail.com mit license dconf-config
 
+mkdir backup-theme-icon
+EOF
+cd backup-theme-icon
+EOF
+dconf dump /org/cinnamon/desktop/interface/ > backup-cinnamon-theme-icon-mouse-font.dconf
+EOF
+dconf dump /org/gnome/desktop/interface/ > backup-gnome-theme-icon-mouse-font.dconf
+EOF
+dconf dump /org/gnome/shell/extensions/user-theme/ > backup-gnome-shell-theme.dconf
+EOF
+dconf dump /org/cinnamon/desktop/background/ > backup-cinnamon-background-wallpaper.dconf
+EOF
+dconf dump /org/gnome/desktop/background/ > backup-gnome-wallpaper.dconf
+EOF
+dconf dump /org/gnome/desktop/screensaver/ > backup-gnome-screensaver-wallpaper.dconf
+EOF
+cd -
+EOF
+tar -czvf backup-theme-icon.tar.gz ./backup-theme-icon 
+EOF
+rm -rf ./backup-theme-icon
+EOF
+cat << EOF > backup-theme-icon-restore.sh
+tar -xzvf ./backup-theme-icon.tar.gz && cd backup-theme-icon && dconf load /org/cinnamon/desktop/interface/ < backup-cinnamon-theme-icon-mouse-font.dconf && dconf load /org/gnome/desktop/interface/ < backup-gnome-theme-icon-mouse-font.dconf && dconf load /org/gnome/shell/extensions/user-theme/ < backup-gnome-shell-theme.dconf && dconf load /org/cinnamon/desktop/background/ < backup-cinnamon-background-wallpaper.dconf && dconf load /org/gnome/desktop/background/ < backup-gnome-wallpaper.dconf && dconf load /org/gnome/desktop/screensaver/ <  backup-gnome-screensaver-wallpaper.dconf && rm -rf backup-cinnamon-theme-icon-mouse-font.dconf backup-gnome-theme-icon-mouse-font.dconf backup-gnome-shell-theme.dconf backup-cinnamon-background-wallpaper.dconf backup-gnome-wallpaper.dconf backup-gnome-screensaver-wallpaper.dconf ./backup-cinnamon-theme-icon-mouse-font.dconf ./backup-gnome-theme-icon-mouse-font.dconf ./backup-gnome-shell-theme.dconf && cd - && rm -rf ./backup-theme-icon.tar.gz ./backup-theme-icon ./backup-cinnamon-background-wallpaper.dconf ./backup-gnome-wallpaper.dconf ./backup-gnome-screensaver-wallpaper.dconf backup-theme-icon-restore.sh
+EOF
+chmod -R a+rwx backup-theme-icon-restore.sh
+EOF
 mkdir ~/.config/autostart/
 EOF
 dconf dump / > dconf-settings-original-restore_21.04.ini
@@ -3894,7 +3921,7 @@ document-directory=@ms ''
 window-ratio=(0.40418836805555552, 0.41859567901234568)
 
 [org/gnome/evolution-data-server]
-migrated=false
+migrated=true
 network-monitor-gio-name=''
 oauth2-google-client-id=''
 oauth2-google-client-secret=''
@@ -4359,10 +4386,11 @@ default-folder-viewer='icon-view'
 executable-text-activation='ask'
 search-filter-time-type='last_modified'
 search-view='list-view'
+show-create-link=true
 show-delete-permanently=true
 
 [org/gnome/nautilus/window-state]
-initial-size=(877, 540)
+initial-size=(874, 535)
 maximized=false
 sidebar-width=193
 
@@ -4636,6 +4664,7 @@ overrides={'Gtk/ShellShowsAppMenu': <0>, 'Gtk/DecorationLayout': <'menu:minimize
 srgba-order='srgb'
 
 [org/gnome/shell]
+app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Maps.desktop': <{'position': <3>}>, 'org.gnome.Photos.desktop': <{'position': <4>}>, 'org.gnome.Totem.desktop': <{'position': <5>}>, 'org.gnome.Calculator.desktop': <{'position': <6>}>, 'org.gnome.gedit.desktop': <{'position': <7>}>, 'simple-scan.desktop': <{'position': <8>}>, 'org.gnome.Calendar.desktop': <{'position': <9>}>, 'org.gnome.Evince.desktop': <{'position': <10>}>, 'org.gnome.Boxes.desktop': <{'position': <11>}>, 'org.gnome.eog.desktop': <{'position': <12>}>, 'org.gnome.Extensions.desktop': <{'position': <13>}>, 'Utilities': <{'position': <14>}>, 'org.gnome.Software.desktop': <{'position': <15>}>, 'org.bleachbit.BleachBit.desktop': <{'position': <16>}>, 'firefox.desktop': <{'position': <17>}>, 'libreoffice-calc.desktop': <{'position': <18>}>, 'org.gnome.Cheese.desktop': <{'position': <19>}>, 'libreoffice-impress.desktop': <{'position': <20>}>, 'libreoffice-writer.desktop': <{'position': <21>}>, 'rhythmbox.desktop': <{'position': <22>}>, 'org.gnome.Tour.desktop': <{'position': <23>}>}]
 disabled-extensions=['window-list@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['apps-menu@gnome-shell-extensions.gcampax.github.com', 'auto-ovpn@yahoo.com', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'CoverflowAltTab@palatis.blogspot.com', 'hidetopbar@mathieu.bidon.ca', 'horizontal-workspaces@gnome-shell-extensions.gcampax.github.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'ubuntu-dock@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'system-monitor@paradoxxx.zero.gmail.com', 'TilixDropdown@ivkuzev@gmail.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'printers@linux-man.org', 'popthemetoggle@kylecorry31.github.io', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'openweather-extension@jenslody.de', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=['org.gnome.Screenshot.desktop', 'ubiquity.desktop', 'nemo.desktop', 'org.gnome.Nautilus.desktop', 'com.github.wwmm.pulseeffects.desktop', 'gnome-control-center.desktop', 'com.gexperts.Tilix.desktop', 'gnome-system-monitor.desktop', 'com.obsproject.Studio.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.DiskUtility.desktop', 'nvidia-settings.desktop', 'ca.desrt.dconf-editor.desktop', 'telegramdesktop.desktop', 'chromium-browser.desktop', 'green-recorder.desktop', 'update-manager.desktop']
