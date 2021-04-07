@@ -3,6 +3,8 @@ theme , icons , fedora , migration wayland obs , oomox-griggorii-theme-icon , Or
 
 Package RPM download: https://github.com/Griggorii/theme-icons_package_noarch.rpm/releases/tag/fedora_theme-icons
 
+install gnome-tweak-tool
+
 $ chmod -R a+rwx Fedora_nautilus_dconf_linux_OS34_V46.0_By_Griggorii_Wayland_adaptation.sh
 
 $ ./Fedora_nautilus_dconf_linux_OS34_V46.0_By_Griggorii_Wayland_adaptation.sh
