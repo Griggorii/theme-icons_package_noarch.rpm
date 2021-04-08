@@ -5290,11 +5290,11 @@ selection-menu-move-to=true
 show-only-directories=false
 
 [org/nemo/window-state]
-geometry='861x498+26+23'
+geometry='894x489+34+28'
 maximized=false
 side-pane-view='places'
 sidebar-bookmark-breakpoint=0
-sidebar-width=160
+sidebar-width=199
 start-with-menu-bar=true
 start-with-sidebar=true
 start-with-status-bar=true
