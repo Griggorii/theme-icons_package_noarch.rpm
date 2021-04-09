@@ -27,5 +27,7 @@ $ gsettings set org.gnome.desktop.wm.preferences theme "Orchis-dark"
 
 $ gsettings set org.gnome.shell.extensions.user-theme name "Orchis"
 
+Support donation message Griggorii@gmail.com real tehnology
+
 
 
