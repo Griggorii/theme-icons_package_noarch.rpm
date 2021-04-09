@@ -18,3 +18,14 @@ terminal ignore sudo ctrl+c ctrl+c ctrl+c $ ./Replace_nemo-to-nautilus_dconf_lin
 Uninstall theam icons example command terminal:
 
 $ sudo dnf remove Orchis-theme_2021-21.04.1-2.noarch oomox-griggorii-theme-icon-21.04.1-2.noarch Pop-dark-oomox-griggorii_theme_2020-21.04.1-2.noarch Tela-theme-icon-21.04.1-2.noarch
+
+Example "Theme_name_modification_and_default" - "Orchis" "Orchis-dark" "Orchis-dark-compact" 
+
+$ gsettings set org.gnome.desktop.interface gtk-theme "Orchis-dark"
+
+$ gsettings set org.gnome.desktop.wm.preferences theme "Orchis-dark"
+
+$ gsettings set org.gnome.shell.extensions.user-theme name "Orchis"
+
+
+
