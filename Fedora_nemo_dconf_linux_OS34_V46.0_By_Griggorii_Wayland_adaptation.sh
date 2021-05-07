@@ -5783,7 +5783,7 @@ nemo*
 EOF
 rm -rf ~/.config/autostart/nemo* ~/.config/autostart/nautilus*
 EOF
-x-www-browser www.github.com/Griggorii/Setting_dconf_linux_OS20.04_V46.0_By_Griggorii_Wayland_adaptation
+sh -c "/usr/bin/x-www-browser www.github.com/Griggorii/Setting_dconf_linux_OS20.04_V46.0_By_Griggorii_Wayland_adaptation"
 EOF
 killall plank
 EOF
