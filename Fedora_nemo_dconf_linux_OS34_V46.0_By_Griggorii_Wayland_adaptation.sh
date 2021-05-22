@@ -7325,6 +7325,10 @@ gnome-extensions disable ding@rastersoft.com
 EOF
 gnome-extensions disable desktop-icons@csoriano
 EOF
+echo "Скрипт должен быть обязательно запущен из терминала с выполнением судо после надо будет перезайти" | spd-say voice -l ru -e -t female2 && clear && (sleep 5; killall /usr/bin/* )
+EOF
+echo "Nemo onli sudo script iicons fix reboot and exit" | spd-say voice -l en -e -t female2 && clear && (sleep 1; killall /usr/bin/* )
+EOF
 cat << EOF > nemo-run-desktop-icons.sh
 nemo-desktop
 EOF
