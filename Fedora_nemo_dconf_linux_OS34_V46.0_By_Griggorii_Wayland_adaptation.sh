@@ -3,10 +3,15 @@
 ####Griggorii@gmail.com mit license dconf-config
 
 EOF
-echo "Искусственный интеллект_начинает_сохранение оригинальных настроек подождите пожалуйста 20 секунд" | spd-say -o rhvoice -l ru -e -t female1 -p -10 -r +10 -R -10 && (sleep 4; killall /usr/bin/* )
+echo "Искусственный интеллект_начинает_сохранение оригинальных настроек подождите пожалуйста 20 секунд" | spd-say -o rhvoice -l ru -e -t female1 -p -10 -r +10 -R -10 && clear && (sleep 4; killall /usr/bin/* )
+EOF
+clear
 EOF
 echo "Artificial intelligence starts saving original settings please wait 20 seconds" | spd-say -o rhvoice -l en -e -t female1 -p -10 -r +10 -R -10
 EOF
+clear
+EOF
+clear && 
 GREEN="\033[1;32m"
 RED="\033[0;31m"
 YELLOW="\033[1;33m"
@@ -5880,6 +5885,8 @@ NoDisplay=false
 EOF
 chmod -R a+rx nemo-desktop.desktop
 EOF
+clear
+EOF
 sudo mv nemo-desktop.desktop /etc/xdg/autostart/
 EOF
 rm nemo-desktop.desktop
@@ -7318,9 +7325,25 @@ gnome-extensions disable ding@rastersoft.com
 EOF
 gnome-extensions disable desktop-icons@csoriano
 EOF
+cat << EOF > nemo-run-desktop-icons.sh
+nemo-desktop
+EOF
+chmod -R a+rwx nemo-run-desktop-icons.sh
+EOF
+/bin/sh ./nemo-run-desktop-icons.sh
+EOF
+rm ./nemo-run-desktop-icons.sh
+EOF
+clear
+EOF
 sh -c "/usr/bin/x-www-browser www.github.com/Griggorii/Setting_dconf_linux_OS20.04_V46.0_By_Griggorii_Wayland_adaptation"
+EOF
+clear
 EOF
 /usr/bin/gnome-extensions-app
 EOF
+clear
+EOF
 plank
 EOF
+clear && exit && exit
